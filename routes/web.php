@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login',[UserAuthenticationController::class, 'login']);
-Route::get('register',[UserAuthenticationController::class, 'register']);
-Route::get('create',[UserAuthenticationController::class, 'create'])->name('auth.create');
+Route::get('/auth/login',[UserAuthenticationController::class, 'login'])->name('auth.login');
+Route::get('/auth/register',[UserAuthenticationController::class, 'register'])->name('auth.register');
+Route::post('/auth/save',[UserAuthenticationController::class, 'save'])->name('auth.save');
+

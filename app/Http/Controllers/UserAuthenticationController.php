@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Facades\Hash;
+
 
 class UserAuthenticationController extends Controller
 {
@@ -16,8 +16,13 @@ class UserAuthenticationController extends Controller
         return view('auth.register');
     }
 
-    function create(Request $request){
-        return $request->input();
-    }
+   function save(Request $request){
+      // return $request->input();
+      $request->validate([
+          'name'=>'required',
+          'email'=>'required|email|unique:admins',
+          'password'=>'required|min:5|max:12'
+      ]);
+   }
 
 }

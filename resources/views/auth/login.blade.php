@@ -17,12 +17,12 @@
 </head>
 <body>
  <div class="container">
-     <div class="row">
+     <div class="row" style="margin-top:45px" >
          <div class="col-md-4 col-md-offset-4">
-         <h2>User Login</h2>
+         <h2 id="content">Login</h2>
          <br>
-             <form id="auth_form"action="#">
-                  <div class="form-group">
+             <form action="" method="post">
+                  <div class="form-group" >
                       <label for="email">Email</label>
                       <input type="text" class="form-control" name="email" placeholder="Enter email">
                   </div>
@@ -35,7 +35,7 @@
                       <button type="submit" class="btn btn-block btn-primary">Login</button>
                   </div>
                   <br>
-                  <a href="register">Create an new account now!</a>
+                  <a href="{{route('auth.register')}}">I don't have an account, Create new</a>
              </form>
          </div>
      </div>

@@ -8,8 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <style>
 .container {
-    left      : 80%;
-    top       : 40%;
+    left      : 75%;
+    top       : 35%;
     position  : absolute;
     transform : translate(-50%, -50%);
 }
@@ -19,10 +19,24 @@
  <div class="container">
      <div class="row" style="margin-top:45px" >
          <div class="col-md-4 col-md-offset-4">
-         <h2>Register</h2>
+         <h2>Register</h2><hr>
          <br>
              <form action="{{route('auth.save')}}" method="post">
+
+             @if(Session::get('success'))
+             <div class="alert alert-success">
+             {{Session::get('success')}}
+             </div>
+             @endif
+
+             @if(Session::get('fail'))
+             <div class="alert alert-danger">
+             {{Session::get('fail')}}
+             </div>
+             @endif
+
              @csrf
+
              <div class="form-group">
                       <label for="name">Email</label>
                       <input type="text" class="form-control" name="name" placeholder="Enter full name" value="{{old('name')}}">
@@ -48,7 +62,9 @@
          </div>
      </div>
  </div> 
+
  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
 </body>
 </html>

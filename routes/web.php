@@ -18,7 +18,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/auth/login',[UserAuthenticationController::class, 'login'])->name('auth.login');
-Route::get('/auth/register',[UserAuthenticationController::class, 'register'])->name('auth.register');
+
 Route::post('/auth/save',[UserAuthenticationController::class, 'save'])->name('auth.save');
+Route::post('/auth/check',[UserAuthenticationController::class, 'check'])->name('auth.check');
+Route::get('/auth/logout',[UserAuthenticationController::class, 'logout'])->name('auth.logout');
+
+
+Route::group(['middleware'=>['AuthCheck']],function(){
+    Route::get('/auth/login',[UserAuthenticationController::class, 'login'])->name('auth.login');
+    Route::get('/auth/register',[UserAuthenticationController::class, 'register'])->name('auth.register');
+    
+    Route::get('/admin/dashboard',[UserAuthenticationController::class, 'dashboard']);
+    Route::get('/admin/settings',[UserAuthenticationController::class, 'settings']);
+    Route::get('/admin/profile',[UserAuthenticationController::class, 'profile']);
+    Route::get('/admin/staff',[UserAuthenticationController::class, 'staff']);
+
+});
 

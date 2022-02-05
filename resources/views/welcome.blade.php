@@ -50,27 +50,14 @@
             float: right;
             }
 
-            .button {
-            background-color: #4CAF50; 
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            }
-           .button2 {background-color: #008CBA;} 
         </style>
     </head>
     
     <body style="background-color:#FFFFFF;">
      <div class="topnav">
   <div class="topnav-right ">
-    <button class="button"><a href="#search">Login</a></button>
-    <button class="button button2"><a href="#about">Register</a></button>
+   <a href="{{route('auth.login')}}">Login</a>
+   <a href="{{route('auth.register')}}">Register</a>
   </div>
 </div>
 

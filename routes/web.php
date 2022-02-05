@@ -34,4 +34,3 @@ Route::group(['middleware'=>['AuthCheck']],function(){
     Route::get('/admin/staff',[UserAuthenticationController::class, 'staff']);
 
 });
-

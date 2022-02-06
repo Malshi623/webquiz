@@ -24,7 +24,7 @@
             }
             .topnav {
             overflow: hidden;
-            background-color: #FFFFFF;
+            background-color: #FFFFF2;
             }
 
             .topnav a {
@@ -53,7 +53,7 @@
         </style>
     </head>
     
-    <body style="background-color:#FFFFFF;">
+    <body style="background-color:#FFFFF2;">
      <div class="topnav">
   <div class="topnav-right ">
    <a href="{{route('auth.login')}}">Login</a>

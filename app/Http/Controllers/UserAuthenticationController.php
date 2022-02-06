@@ -57,38 +57,13 @@ class UserAuthenticationController extends Controller
           //check password
           if(Hash::check($request->password, $userInfo->password)){
               $request->session()->put('LoggedUser',$userInfo->id);
-              return redirect('admin/dashboard');
+              return redirect('admin/userdashboard');
           }else{
               return back()->with('fail','Incorrect password');
           }
       }
     }
     
-    //logout
-    function logout(){
-        if(session()->has('LoggedUser')){
-            session()->pull('LoggedUser');
-            return redirect('/auth/login');
-        }
-    }
-
-    //admin dashboard
-    function dashboard(){
-        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
-        return view('admin.dashboard',$data);
-    }
-
-    function settings(){
-        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
-        return view('admin.settings',$data);
-    }
-    function profile(){
-        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
-        return view('admin.profile',$data);
-    }
-    function staff(){
-        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
-        return view('admin.staff',$data);
-    }
-
+  
+   
 }

@@ -64,6 +64,8 @@ class UserAuthenticationController extends Controller
       }
     }
     
-  
-   
+    //userdashboard
+    function userdashboard(){
+        return view('admin.userdashboard');
+    }
 }

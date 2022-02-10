@@ -28,6 +28,7 @@ class UserAuthenticationController extends Controller
           'password'=>'required|min:5|max:12'
       ]);
 
+      //insert data to database
       $admin = new Admin;
       $admin->name = $request->name;
       $admin->email = $request->email;
@@ -49,6 +50,7 @@ class UserAuthenticationController extends Controller
           'password'=>'required|min:5|max:12'
       ]);
 
+     
       $userInfo = Admin::where('email','=',$request->email)->first();
 
       if(!$userInfo){
@@ -57,7 +59,7 @@ class UserAuthenticationController extends Controller
           //check password
           if(Hash::check($request->password, $userInfo->password)){
               $request->session()->put('LoggedUser',$userInfo->id);
-              return redirect('admin/userdashboard');
+              return redirect('admin/dashboard');
           }else{
               return back()->with('fail','Incorrect password');
           }

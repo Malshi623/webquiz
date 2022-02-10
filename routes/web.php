@@ -24,5 +24,6 @@ Route::post('/auth/check',[UserAuthenticationController::class, 'check'])->name(
 Route::get('/auth/logout',[UserAuthenticationController::class, 'logout'])->name('auth.logout');
 
 
-    Route::get('/auth/login',[UserAuthenticationController::class, 'login'])->name('auth.login');
-    Route::get('/auth/register',[UserAuthenticationController::class, 'register'])->name('auth.register');
+Route::get('/auth/login',[UserAuthenticationController::class, 'login'])->name('auth.login');
+Route::get('/auth/register',[UserAuthenticationController::class, 'register'])->name('auth.register');
+

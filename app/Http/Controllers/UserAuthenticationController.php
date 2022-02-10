@@ -73,11 +73,26 @@ class UserAuthenticationController extends Controller
             return redirect('/auth/login');
         }
     }
-    
+  
+
     //userdashboard
     function dashboard(){
         $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
         return view('admin.dashboard',$data);
+
+    }
+
+    //start
+    function start(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.start',$data);
+
+    }
+
+    //spin wheel
+    function spinwheel(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel',$data);
 
     }
     

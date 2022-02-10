@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin wheel</title>
 
-        <title>Start</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         
         <!-- boostrap css -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -17,7 +17,16 @@
         
         <!-- Styles -->
          <style>
-            
+             body {
+            background-image: url('{{ asset('storage/img1.png') }}');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: contain;
+            background-position: center;
+
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            }
 
             .topnav {
             overflow: hidden;
@@ -54,34 +63,10 @@
             width:100px;
             bottom:10px;
             }
-             
-            h1 {
-            text-align: center;
-            text-transform: uppercase;
-            color: #4CAF50;
-            }
 
-            * {
-            box-sizing: border-box;
-            
-            }
-
-            .column {
-            float: left;
-            width: 25%;
-            padding: 3px;
-            padding-top: 30px;
-            }
-
-            .row::after {
-            content: "";
-            clear: both;
-            display: table;
-            }
         </style>
-    </head>
-    
-    <body style="background-color:#FFFFF2;">
+</head>
+<body style="background-color:#FFFFF2;">
    <div class="topnav">
    <i class="bi bi-person-circle" style="font-size: 2rem;"> {{$LoggedUserInfo['name']}}</i>
   <div class="topnav-right ">
@@ -89,30 +74,12 @@
   </div>
 </div>
 
-<div>
-    <h1>Choose Your Favourite Game...</h1>
-</div>
-<br>
-
-<div class="row" >
-  <div class="column">
-    <a href="/admin/spinwheel">
-      <img src="{{ asset('storage/spinwheel.png') }}"  style="width:100%"></a>
-    
-  </div>
-  <div class="column">
-    <img src="{{ asset('storage/dartgame.png') }}"  style="width:100%">
-  </div>
-  <div class="column">
-    <img src="{{ asset('storage/balloonshoot.png') }}"  style="width:100%">
-  </div>
-  <div class="column">
-    <img src="{{ asset('storage/mountainclimb.png') }}"  style="width:100%">
-  </div>
+<div class=Center align='center'>
+<button type="submit" class="btn-bot btn-primary btn btn-success btn-lg" onclick="window.location='{{url('/admin/start')}}'" >Start</button>
 </div>
 
 <!-- boostrap js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>     
-    </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>    
+</body>
 </html>

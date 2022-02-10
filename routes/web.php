@@ -33,6 +33,7 @@ Route::group(['middleware'=>['AuthCheck']],function(){
     
     Route::get('/admin/dashboard',[UserAuthenticationController::class, 'dashboard']);
     Route::get('/admin/start',[UserAuthenticationController::class, 'start']);
+    Route::get('/admin/spinwheel',[UserAuthenticationController::class, 'spinwheel']);
 });
 
 

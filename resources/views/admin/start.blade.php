@@ -21,7 +21,7 @@
 
             .topnav {
             overflow: hidden;
-            background-color: #FFFFF2;
+            background-color: #FFFFFF;
             }
 
             .topnav a {
@@ -81,7 +81,7 @@
         </style>
     </head>
     
-    <body style="background-color:#FFFFF2;">
+    <body style="background-color:#FFFFFF;">
    <div class="topnav">
    <i class="bi bi-person-circle" style="font-size: 2rem;"> {{$LoggedUserInfo['name']}}</i>
   <div class="topnav-right ">

@@ -17,17 +17,7 @@
         
         <!-- Styles -->
          <style>
-             body {
-            background-image: url('{{ asset('storage/img1.png') }}');
-            background-repeat: no-repeat;
-            background-attachment: fixed;  
-            background-size: contain;
-            background-position: center;
-
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            }
-
+          
             .topnav {
             overflow: hidden;
             background-color: #FFFFF2;
@@ -56,27 +46,19 @@
             float: right;
             }
 
-            .btn-bot{
-            position:absolute; 
-            margin-left:-50px;
-            left:50%;
-            width:100px;
-            bottom:10px;
-            }
 
         </style>
     </head>
     
     <body style="background-color:#FFFFF2;">
    <div class="topnav">
-   <i class="bi bi-person-circle" style="font-size: 2rem;"> {{$LoggedUserInfo['name']}}</i>
-  <div class="topnav-right ">
+   
    <a href="{{route('auth.logout')}}">Logout<i class="bi bi-arrow-right-short"></i></a>
   </div>
 </div>
 
 <div class=Center align='center'>
-<button type="submit" class="btn-bot btn-primary btn btn-success btn-lg" onclick="window.location='{{url('/admin/start')}}'" >Start</button>
+<button type="submit" class="btn-bot btn-primary btn btn-success btn-lg" onclick="window.location='{{route('auth.login')}}'" >Start</button>
 </div>
 
 <!-- boostrap js -->

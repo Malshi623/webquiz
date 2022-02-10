@@ -76,7 +76,7 @@
 </div>
 
 <div class=Center align='center'>
-<button type="submit" class="btn-bot btn-primary btn btn-success btn-lg" onclick="window.location='{{route('admin.start')}}'" >Start</button>
+<button type="submit" class="btn-bot btn-primary btn btn-success btn-lg" onclick="window.location='{{route('auth.login')}}'" >Start</button>
 </div>
 
 <!-- boostrap js -->

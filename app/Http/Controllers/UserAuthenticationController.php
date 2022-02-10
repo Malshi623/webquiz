@@ -51,14 +51,14 @@ class UserAuthenticationController extends Controller
       ]);
 
      
-      $userInfo = Admin::where('email','=',$request->email)->first();
+      $UserInfo = Admin::where('email','=',$request->email)->first();
 
-      if(!$userInfo){
+      if(!$UserInfo){
           return back()->with('fail','We do not recognize your email address');
       }else{
           //check password
-          if(Hash::check($request->password, $userInfo->password)){
-              $request->session()->put('LoggedUser',$userInfo->id);
+          if(Hash::check($request->password, $UserInfo->password)){
+              $request->session()->put('LoggedUser',$UserInfo->id);
               return redirect('admin/dashboard');
           }else{
               return back()->with('fail','Incorrect password');
@@ -66,8 +66,19 @@ class UserAuthenticationController extends Controller
       }
     }
     
-    //userdashboard
-    function userdashboard(){
-        return view('admin.userdashboard');
+    //logout
+    function logout(){
+        if(session()->has('LoggedUser')){
+            session()->pull('LoggedUser');
+            return redirect('/auth/login');
+        }
     }
+    
+    //userdashboard
+    function dashboard(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dashboard',$data);
+
+    }
+    
 }

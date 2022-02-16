@@ -65,11 +65,6 @@
   </div>
 </div>
 
-<!--
-    <div class=Center align='center'>
-    <button type="submit" class="btn-bot btn-primary btn btn-success btn-lg" onclick="window.location='{{url('/admin/start')}}'" >Start</button>
-    </div>
--->
 
 <!-- boostrap js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

@@ -95,6 +95,25 @@ class UserAuthenticationController extends Controller
         return view('admin.spinwheel',$data);
 
     }
+    //balloon shoot
+    function balloonshoot(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot',$data);
+
+    }
+    //dar tgame
+    function dartgame(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame',$data);
+
+    }
+    //mountain climb
+    function mountainclimb(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb',$data);
+
+    }
+    
     
     
 }

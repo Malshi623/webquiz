@@ -102,20 +102,20 @@
 <!--topic buttons-->
 <div class="topics">
 <div class="w3-bar">
-  <button class="w3-button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location=''">Mathematics</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-  <button class="w3-button w3-deep-orange w3-round-xxlarge w3-hover-orange" onclick="document.location=''">Biology</button>
+  <button class="w3-button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location='/admin/spinwheel/spinwheel_levels/spinwheel_math'">Mathematics</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <button class="w3-button w3-deep-orange w3-round-xxlarge w3-hover-orange" onclick="document.location='/admin/spinwheel/spinwheel_levels/spinwheel_biology'">Biology</button>
 </div>
     <br>
     <br>
     <div class="w3-bar">
-  <button class="w3-button w3-green w3-round-xxlarge w3-hover-light-green" onclick="document.location=''">Nature</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-  <button class="w3-button w3-brown w3-round-xxlarge w3-hover-khaki" onclick="document.location=''">History</button>
+  <button class="w3-button w3-green w3-round-xxlarge w3-hover-light-green" onclick="document.location='/admin/spinwheel/spinwheel_levels/spinwheel_nature'">Nature</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <button class="w3-button w3-brown w3-round-xxlarge w3-hover-khaki" onclick="document.location='/admin/spinwheel/spinwheel_levels/spinwheel_history'">History</button>
 </div>
     <br>
     <br>
     <div class="w3-bar">
-  <button class="w3-button w3-purple w3-round-xxlarge w3-hover-sand" onclick="document.location=''">ICT</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-  <button class="w3-button w3-pink w3-round-xxlarge w3-hover-pale-red" onclick="document.location=''">Random</button>
+  <button class="w3-button w3-purple w3-round-xxlarge w3-hover-sand" onclick="document.location='/admin/spinwheel/spinwheel_levels/spinwheel_ict'">ICT</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <button class="w3-button w3-pink w3-round-xxlarge w3-hover-pale-red" onclick="document.location='/admin/spinwheel/spinwheel_levels/spinwheel_random'">Random</button>
 </div>
     </div>
 </div>

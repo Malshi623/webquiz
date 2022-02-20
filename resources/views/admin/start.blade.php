@@ -15,7 +15,7 @@
         <!-- boostrap icon -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         
-        <!-- Styles -->
+        <!-- Styles.CSS -->
          <style>
             
             .topnav {
@@ -72,9 +72,11 @@
         </style>
         
       
-    </head>
+    </head> 
+    
     <body style="background-color:#FFFFF2;">
-
+        
+    <!--username and logout-->
         <div class="topnav">
                 <i class="bi bi-person-circle" style="font-size: 2rem;"> {{$LoggedUserInfo['name']}}</i>
                 <div class="topnav-right ">
@@ -82,28 +84,30 @@
                 </div>
         </div> 
         
+        <!--title of page-->
         <div>
             <h1>choose your favourite game...</h1>
         </div>
-
+         
+        <!--game image with link-->
         `<div class="row">
             <div class="column">
-                <a href="/admin/spinwheel">
+                <a href="/admin/spinwheel/spinwheel">
                     <img src="{{ asset('storage/spinwheel.png') }}"  style="width:100%">
                 </a>
             </div>
             <div class="column">
-                <a href="/admin/dartgame">
+                <a href="/admin/dartgame/dartgame">
                     <img src="{{ asset('storage/dartgame.png') }}"  style="width:100%">
                 </a>
             </div>
             <div class="column">
-                <a href="/admin/balloonshoot">
+                <a href="/admin/balloonshoot/balloonshoot">
                     <img src="{{ asset('storage/balloonshoot.png') }}"  style="width:100%">
                 </a>              
             </div>
             <div class="column">
-                <a href="/admin/mountainclimb">
+                <a href="/admin/mountainclimb/mountainclimb">
                     <img src="{{ asset('storage/mountainclimb.png') }}"  style="width:100%">
                 </a>
             </div>
@@ -112,5 +116,6 @@
 <!-- boostrap js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>     
+    
     </body>
 </html>

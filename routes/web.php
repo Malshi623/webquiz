@@ -34,10 +34,10 @@ Route::group(['middleware'=>['AuthCheck']],function(){
     Route::get('/admin/dashboard',[UserAuthenticationController::class, 'dashboard']);
     Route::get('/admin/start',[UserAuthenticationController::class, 'start']);
     
-    Route::get('/admin/spinwheel',[UserAuthenticationController::class, 'spinwheel']);
-    Route::get('/admin/dartgame',[UserAuthenticationController::class, 'dartgame']);
-    Route::get('/admin/balloonshoot',[UserAuthenticationController::class, 'balloonshoot']);
-    Route::get('/admin/mountainclimb',[UserAuthenticationController::class, 'mountainclimb']);
+    Route::get('/admin/spinwheel/spinwheel',[UserAuthenticationController::class, 'spinwheel']);
+    Route::get('/admin/dartgame/dartgame',[UserAuthenticationController::class, 'dartgame']);
+    Route::get('/admin/balloonshoot/balloonshoot',[UserAuthenticationController::class, 'balloonshoot']);
+    Route::get('/admin/mountainclimb/mountainclimb',[UserAuthenticationController::class, 'mountainclimb']);
 });
 
 

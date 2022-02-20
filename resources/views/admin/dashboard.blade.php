@@ -15,7 +15,7 @@
         <!-- boostrap icon -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         
-        <!-- Styles -->
+        <!-- Styles.css -->
          <style>
              body {
             background-image: url('{{ asset('storage/img1.png') }}');
@@ -68,6 +68,8 @@
     </head>
     
     <body style="background-color:#FFFFF2;">
+
+    <!--username and logout-->
    <div class="topnav">
    <i class="bi bi-person-circle" style="font-size: 2rem;"> {{$LoggedUserInfo['name']}}</i>
   <div class="topnav-right ">
@@ -75,6 +77,7 @@
   </div>
 </div>
 
+<!--start button-->
 <div class=Center align='center'>
 <button type="submit" class="btn-bot btn-primary btn btn-success btn-lg" onclick="window.location='{{url('/admin/start')}}'" >Start</button>
 </div>

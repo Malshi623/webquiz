@@ -14,11 +14,13 @@
         
         <!-- boostrap icon -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+        <!--W3 School CSS-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         
-        <!-- Styles -->
+        <!-- Styles.css -->
          <style>
             
-
             .topnav {
             overflow: hidden;
             background-color: #FFFFF2;
@@ -55,9 +57,35 @@
             bottom:10px;
             }
 
+            h1{
+                text-align: center;
+                text-transform: uppercase;
+                color: #4CAF50;
+                font-size: 60px;
+                padding: 30px;
+
+            }
+
+            .topics{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                padding: 30px;
+                padding-top: 100px;
+            }
+
+            .w3-button {
+                width:210px;
+                font-size: 30px;
+            }
+
         </style>
 </head>
+
 <body style="background-color:#FFFFF2;">
+
+<!--back and logout-->
    <div class="topnav">
    <a href="/admin/start"><i class="bi bi-arrow-left-short"></i> Back</a>
   <div class="topnav-right ">
@@ -65,11 +93,32 @@
   </div>
 </div>
 
-<!--
-    <div class=Center align='center'>
-    <button type="submit" class="btn-bot btn-primary btn btn-success btn-lg" onclick="window.location='{{url('/admin/start')}}'" >Start</button>
+<!--title of page-->
+<div>
+    <h1>what do you want to learn?</h1>
+</div>
+<br>
+
+<!--topic buttons-->
+<div class="topics">
+<div class="w3-bar">
+  <button class="w3-button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location=''">Mathematics</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <button class="w3-button w3-deep-orange w3-round-xxlarge w3-hover-orange" onclick="document.location=''">Biology</button>
+</div>
+    <br>
+    <br>
+    <div class="w3-bar">
+  <button class="w3-button w3-green w3-round-xxlarge w3-hover-light-green" onclick="document.location=''">Nature</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <button class="w3-button w3-brown w3-round-xxlarge w3-hover-khaki" onclick="document.location=''">History</button>
+</div>
+    <br>
+    <br>
+    <div class="w3-bar">
+  <button class="w3-button w3-purple w3-round-xxlarge w3-hover-sand" onclick="document.location=''">ICT</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <button class="w3-button w3-pink w3-round-xxlarge w3-hover-pale-red" onclick="document.location=''">Random</button>
+</div>
     </div>
--->
+</div>
 
 <!-- boostrap js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

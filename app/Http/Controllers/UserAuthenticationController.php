@@ -92,25 +92,25 @@ class UserAuthenticationController extends Controller
     //spin wheel
     function spinwheel(){
         $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
-        return view('admin.spinwheel',$data);
+        return view('admin.spinwheel.spinwheel',$data);
 
     }
     //balloon shoot
     function balloonshoot(){
         $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
-        return view('admin.balloonshoot',$data);
+        return view('admin.balloonshoot.balloonshoot',$data);
 
     }
     //dar tgame
     function dartgame(){
         $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
-        return view('admin.dartgame',$data);
+        return view('admin.dartgame.dartgame',$data);
 
     }
     //mountain climb
     function mountainclimb(){
         $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
-        return view('admin.mountainclimb',$data);
+        return view('admin.mountainclimb.mountainclimb',$data);
 
     }
     

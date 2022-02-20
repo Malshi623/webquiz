@@ -56,6 +56,8 @@
     </head>
     
     <body style="background-color:#FFFFF2;">
+
+    <!--Login and Register-->
      <div class="topnav">
   <div class="topnav-right ">
    <a href="{{route('auth.login')}}">Login</a>

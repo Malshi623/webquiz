@@ -92,22 +92,22 @@
         <!--game image with link-->
         `<div class="row">
             <div class="column">
-                <a href="/admin/spinwheel/spinwheel">
+                <a href="{{url('/admin/spinwheel/spinwheel')}}">
                     <img src="{{ asset('storage/spinwheel.png') }}"  style="width:100%">
                 </a>
             </div>
             <div class="column">
-                <a href="/admin/dartgame/dartgame">
+                <a href="{{url('/admin/dartgame/dartgame')}}">
                     <img src="{{ asset('storage/dartgame.png') }}"  style="width:100%">
                 </a>
             </div>
             <div class="column">
-                <a href="/admin/balloonshoot/balloonshoot">
+                <a href="{{url('/admin/balloonshoot/balloonshoot')}}">
                     <img src="{{ asset('storage/balloonshoot.png') }}"  style="width:100%">
                 </a>              
             </div>
             <div class="column">
-                <a href="/admin/mountainclimb/mountainclimb">
+                <a href="{{url('/admin/mountainclimb/mountainclimb')}}">
                     <img src="{{ asset('storage/mountainclimb.png') }}"  style="width:100%">
                 </a>
             </div>

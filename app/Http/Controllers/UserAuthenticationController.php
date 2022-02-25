@@ -244,4 +244,31 @@ class UserAuthenticationController extends Controller
         return view('admin.mountainclimb.mountainclimb_levels.mountainclimb_random',$data);
 
     }
+
+    /*game levels-biology*/
+
+    //balloonshoot
+    function balloonshoot_biology_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot_biology_levels.balloonshoot_biology_level1',$data);
+
+    }
+    //dartgame
+    function dartgame_biology_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_biology_levels.dartgame_biology_level1',$data);
+
+    }
+    //mountainclimb
+    function mountainclimb_biology_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb_biology_levels.mountainclimb_biology_level1',$data);
+
+    }
+    //spinwheel
+    function spinwheel_biology_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_biology_levels.spinwheel_biology_level1',$data);
+
+    }
 }

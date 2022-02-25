@@ -74,6 +74,16 @@ Route::group(['middleware'=>['AuthCheck']],function(){
     Route::get('/admin/mountainclimb/mountainclimb_levels/mountainclimb_history',[UserAuthenticationController::class, 'mountainclimb_history']);
     Route::get('/admin/mountainclimb/mountainclimb_levels/mountainclimb_ict',[UserAuthenticationController::class, 'mountainclimb_ict']);
     Route::get('/admin/mountainclimb/mountainclimb_levels/mountainclimb_random',[UserAuthenticationController::class, 'mountainclimb_random']);
+
+    /*game levels-biology*/
+    //balloon shoot
+    Route::get('/admin/balloonshoot/balloonshoot_biology_levels/balloonshoot_biology_level1',[UserAuthenticationController::class, 'balloonshoot_biology_level1']);
+    //dart game
+    Route::get('/admin/dartgame/dartgame_biology_levels/dartgame_biology_level1',[UserAuthenticationController::class, 'dartgame_biology_level1']);
+    //mountain climb
+    Route::get('/admin/mountainclimb/mountainclimb_biology_levels/mountainclimb_biology_level1',[UserAuthenticationController::class, 'mountainclimb_biology_level1']);
+    //spin wheel
+    Route::get('/admin/spinwheel/spinwheel_biology_levels/spinwheel_biology_level1',[UserAuthenticationController::class, 'spinwheel_biology_level1']);
 });
 
 

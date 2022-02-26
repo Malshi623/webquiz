@@ -271,4 +271,85 @@ class UserAuthenticationController extends Controller
         return view('admin.spinwheel.spinwheel_biology_levels.spinwheel_biology_level1',$data);
 
     }
+
+    /*game levels-math*/
+
+    //balloonshoot
+    function balloonshoot_math_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot_math_levels.balloonshoot_math_level1',$data);
+
+    }
+    //dartgame
+    function dartgame_math_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_math_levels.dartgame_math_level1',$data);
+
+    }
+    //mountainclimb
+    function mountainclimb_math_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb_math_levels.mountainclimb_math_level1',$data);
+
+    }
+    //spinwheel
+    function spinwheel_math_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_math_levels.spinwheel_math_level1',$data);
+
+    }
+
+    /*game levels-history*/
+
+    //balloonshoot
+    function balloonshoot_history_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot_history_levels.balloonshoot_history_level1',$data);
+
+    }
+    //dartgame
+    function dartgame_history_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_history_levels.dartgame_history_level1',$data);
+
+    }
+    //mountainclimb
+    function mountainclimb_history_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb_history_levels.mountainclimb_history_level1',$data);
+
+    }
+    //spinwheel
+    function spinwheel_history_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_history_levels.spinwheel_history_level1',$data);
+
+    }
+
+    /*game levels-nature*/
+
+    //balloonshoot
+    function balloonshoot_nature_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot_nature_levels.balloonshoot_nature_level1',$data);
+
+    }
+    //dartgame
+    function dartgame_nature_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_nature_levels.dartgame_nature_level1',$data);
+
+    }
+    //mountainclimb
+    function mountainclimb_nature_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb_nature_levels.mountainclimb_nature_level1',$data);
+
+    }
+    //spinwheel
+    function spinwheel_nature_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_nature_levels.spinwheel_nature_level1',$data);
+
+    }
 }

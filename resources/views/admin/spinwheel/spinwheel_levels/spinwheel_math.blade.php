@@ -111,7 +111,7 @@
 
 <!--level buttons-->
 <div>
-<button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location='{{url('/admin/balloonshoot/balloonshoot_biology_levels/balloonshoot_biology_level1')}}'">01</button>&emsp;&emsp;&emsp;
+<button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location='{{url('/admin/spinwheel/spinwheel_math_levels/spinwheel_math_level1')}}'">01</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >02</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >03</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >04</button>&emsp;&emsp;&emsp;

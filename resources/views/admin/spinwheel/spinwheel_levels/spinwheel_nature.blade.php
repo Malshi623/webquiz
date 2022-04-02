@@ -96,7 +96,7 @@
 
    <!--back and logout-->
    <div class="topnav">
-   <a href="/admin/balloonshoot/balloonshoot"><i class="bi bi-arrow-left-short"></i> Back</a>
+   <a href="/admin/spinwheel/spinwheel"><i class="bi bi-arrow-left-short"></i> Back</a>
   <div class="topnav-right ">
    <a href="{{route('auth.logout')}}">Logout <i class="bi bi-arrow-right-short"></i></a>
   </div>

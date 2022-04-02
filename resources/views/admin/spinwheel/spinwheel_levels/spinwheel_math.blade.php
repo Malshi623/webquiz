@@ -95,7 +95,7 @@
 
    <!--back and logout-->
    <div class="topnav">
-   <a href="/admin/balloonshoot/balloonshoot"><i class="bi bi-arrow-left-short"></i> Back</a>
+   <a href="/admin/spinwheel/spinwheel"><i class="bi bi-arrow-left-short"></i> Back</a>
   <div class="topnav-right ">
    <a href="{{route('auth.logout')}}">Logout <i class="bi bi-arrow-right-short"></i></a>
   </div>
@@ -111,7 +111,7 @@
 
 <!--level buttons-->
 <div>
-<button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location='{{url('/admin/spinwheel/spinwheel_math_levels/spinwheel_math_level1')}}'">01</button>&emsp;&emsp;&emsp;
+<button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location='{{url('http://127.0.0.1:5500/spinwheel.html')}}'">01</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >02</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >03</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >04</button>&emsp;&emsp;&emsp;

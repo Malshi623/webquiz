@@ -9,7 +9,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         
-        
+        <!-- boostrap css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
         <!-- Styles -->
          <style>
@@ -17,14 +18,15 @@
             background-image: url('{{ asset('storage/logoImage2.png') }}');
             background-repeat: no-repeat;
             background-attachment: fixed;  
-            background-size: cover;
+            background-size: contain;
+            background-position: center;
 
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             }
             .topnav {
             overflow: hidden;
-            background-color: #FFFFFF;
+            background-color: #FFFFF2;
             }
 
             .topnav a {
@@ -50,31 +52,22 @@
             float: right;
             }
 
-            .button {
-            background-color: #4CAF50; 
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            }
-           .button2 {background-color: #008CBA;} 
         </style>
     </head>
     
-    <body style="background-color:#FFFFFF;">
+    <body style="background-color:#FFFFF2;">
+
+    <!--Login and Register-->
      <div class="topnav">
   <div class="topnav-right ">
-    <button class="button"><a href="#search">Login</a></button>
-    <button class="button button2"><a href="#about">Register</a></button>
+   <a href="{{route('auth.login')}}">Login</a>
+   <a href="{{route('auth.register')}}">Register</a>
   </div>
 </div>
 
-
+<!-- boostrap js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
      
     </body>
 </html>

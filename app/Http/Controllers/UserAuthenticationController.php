@@ -28,6 +28,7 @@ class UserAuthenticationController extends Controller
           'password'=>'required|min:5|max:12'
       ]);
 
+      //insert data to database
       $admin = new Admin;
       $admin->name = $request->name;
       $admin->email = $request->email;
@@ -49,14 +50,15 @@ class UserAuthenticationController extends Controller
           'password'=>'required|min:5|max:12'
       ]);
 
-      $userInfo = Admin::where('email','=',$request->email)->first();
+     
+      $UserInfo = Admin::where('email','=',$request->email)->first();
 
-      if(!$userInfo){
+      if(!$UserInfo){
           return back()->with('fail','We do not recognize your email address');
       }else{
           //check password
-          if(Hash::check($request->password, $userInfo->password)){
-              $request->session()->put('LoggedUser',$userInfo->id);
+          if(Hash::check($request->password, $UserInfo->password)){
+              $request->session()->put('LoggedUser',$UserInfo->id);
               return redirect('admin/dashboard');
           }else{
               return back()->with('fail','Incorrect password');
@@ -71,24 +73,230 @@ class UserAuthenticationController extends Controller
             return redirect('/auth/login');
         }
     }
+  
 
-    //admin dashboard
+    //userdashboard
     function dashboard(){
         $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
         return view('admin.dashboard',$data);
+
     }
 
-    function settings(){
+    //start
+    function start(){
         $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
-        return view('admin.settings',$data);
-    }
-    function profile(){
-        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
-        return view('admin.profile',$data);
-    }
-    function staff(){
-        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
-        return view('admin.staff',$data);
+        return view('admin.start',$data);
+
     }
 
+    //spin wheel
+    function spinwheel(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel',$data);
+
+    }
+
+    //balloon shoot
+    function balloonshoot(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot',$data);
+
+    }
+
+    //dar tgame
+    function dartgame(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame',$data);
+
+    }
+
+    //mountain climb
+    function mountainclimb(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb',$data);
+
+    }
+    
+    //spin wheel levels
+    function spinwheel_math(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_levels.spinwheel_math',$data);
+
+    }
+    function spinwheel_biology(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_levels.spinwheel_biology',$data);
+
+    }
+    function spinwheel_nature(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_levels.spinwheel_nature',$data);
+
+    }
+    function spinwheel_history(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_levels.spinwheel_history',$data);
+
+    }
+    function spinwheel_ict(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_levels.spinwheel_ict',$data);
+
+    }
+    function spinwheel_random(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_levels.spinwheel_random',$data);
+
+    }
+
+    //dart game levels
+    function dartgame_math(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_levels.dartgame_math',$data);
+
+    }
+    function dartgame_biology(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_levels.dartgame_biology',$data);
+
+    }
+    function dartgame_nature(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_levels.dartgame_nature',$data);
+
+    }
+    function dartgame_history(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_levels.dartgame_history',$data);
+
+    }
+    function dartgame_ict(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_levels.dartgame_ict',$data);
+
+    }
+    function dartgame_random(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_levels.dartgame_random',$data);
+
+    }
+
+    //balloon shoot levels
+    function balloonshoot_math(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot_levels.balloonshoot_math',$data);
+
+    }
+    function balloonshoot_biology(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot_levels.balloonshoot_biology',$data);
+
+    }
+    function balloonshoot_nature(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot_balloonshoot.levels.balloonshoot_nature',$data);
+
+    }
+    function balloonshoot_history(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot_levels.balloonshoot_history',$data);
+
+    }
+    function balloonshoot_ict(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot_levels.balloonshoot_ict',$data);
+
+    }
+    function balloonshoot_random(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot_levels.balloonshoot_random',$data);
+
+    }
+
+    //mountain climb levels
+    function mountainclimb_math(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb_levels.mountainclimb_math',$data);
+
+    }
+    function mountainclimb_biology(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb_levels.mountainclimb_biology',$data);
+
+    }
+    function mountainclimb_nature(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.levels.nature',$data);
+
+    }
+    function mountainclimb_history(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb_levels.mountainclimb_history',$data);
+
+    }
+    function mountainclimb_ict(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb_levels.mountainclimb_ict',$data);
+
+    }
+    function mountainclimb_random(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb_levels.mountainclimb_random',$data);
+
+    }
+
+    /*game levels-biology*/
+
+    //balloonshoot
+    function balloonshoot_biology_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot_biology_levels.balloonshoot_biology_level1',$data);
+
+    }
+    //dartgame
+    function dartgame_biology_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_biology_levels.dartgame_biology_level1',$data);
+
+    }
+    //mountainclimb
+    function mountainclimb_biology_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb_biology_levels.mountainclimb_biology_level1',$data);
+
+    }
+    //spinwheel
+    function spinwheel_biology_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_biology_levels.spinwheel_biology_level1',$data);
+
+    }
+
+    /*game levels-math*/
+
+    //balloonshoot
+    function balloonshoot_math_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.balloonshoot.balloonshoot_math_levels.balloonshoot_math_level1',$data);
+
+    }
+    //dartgame
+    function dartgame_math_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.dartgame.dartgame_math_levels.dartgame_math_level1',$data);
+
+    }
+    //mountainclimb
+    function mountainclimb_math_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.mountainclimb.mountainclimb_math_levels.mountainclimb_math_level1',$data);
+
+    }
+    //spinwheel
+    function spinwheel_math_level1(){
+        $data = ['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+        return view('admin.spinwheel.spinwheel_math_levels.spinwheel_math_level1',$data);
+
+    }
+  
 }

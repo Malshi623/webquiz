@@ -111,7 +111,7 @@
 
 <!--level buttons-->
 <div>
-<button class="button w3-deep-orange w3-round-xxlarge w3-hover-orange" onclick="document.location='{{url('/admin/dartgame/dartgame_biology_levels/dartgame_biology_level1')}}'">01</button>&emsp;&emsp;&emsp;
+<button class="button w3-deep-orange w3-round-xxlarge w3-hover-orange" >01</button>&emsp;&emsp;&emsp;
 <button class="button w3-deep-orange w3-round-xxlarge w3-hover-orange" >02</button>&emsp;&emsp;&emsp;
 <button class="button w3-deep-orange w3-round-xxlarge w3-hover-orange" >03</button>&emsp;&emsp;&emsp;
 <button class="button w3-deep-orange w3-round-xxlarge w3-hover-orange" >04</button>&emsp;&emsp;&emsp;

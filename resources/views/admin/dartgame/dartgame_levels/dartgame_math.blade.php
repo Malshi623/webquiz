@@ -111,7 +111,7 @@
 
 <!--level buttons-->
 <div>
-<button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location='{{url('/admin/dartgame/dartgame_math_levels/dartgame_math_level1')}}'">01</button>&emsp;&emsp;&emsp;
+<button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location='{{url('https://malshi623.github.io/WebQuiz-Dartgame/')}}'">01</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >02</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >03</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >04</button>&emsp;&emsp;&emsp;

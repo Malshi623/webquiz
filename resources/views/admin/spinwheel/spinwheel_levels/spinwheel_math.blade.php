@@ -111,7 +111,7 @@
 
 <!--level buttons-->
 <div>
-<button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location='{{url('http://127.0.0.1:5500/spinwheel.html')}}'">01</button>&emsp;&emsp;&emsp;
+<button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location='{{url('https://malshi623.github.io/WebQuiz-Spinwheel/')}}'">01</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >02</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >03</button>&emsp;&emsp;&emsp;
 <button class="button w3-indigo w3-round-xxlarge w3-hover-light-blue" >04</button>&emsp;&emsp;&emsp;

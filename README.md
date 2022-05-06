@@ -27,43 +27,6 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-
-
-## Usage <br>
-Setup your coding environment <br>
-```
-git clone git@github.com:Malshi623/webquiz.git
-cd laravel8-tailwindcss2
-composer install
-cp .env.example .env 
-php artisan key:generate
-php artisan cache:clear && php artisan config:clear 
-php artisan serve 
-```
-
-## Database Setup <br>
-We will be performing database tests which (obviously) needs to interact with the database. Make sure that your database credentials are up and running.
-```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=webquiz
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-Next up, we need to create the database which will be grabbed from the ```DB_DATABASE``` environment variable.
-```
-mysql;
-create database webquizdb;
-exit;
-```
-
-Finally, make sure that you migrate your migrations.
-```
-php artisan migrate
-```
-
 ## Running tests
 One of the most important things about tests is obviously running them since you can create as many as you want, but you can’t test anything if it doesn’t work.
 

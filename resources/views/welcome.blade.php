@@ -15,10 +15,10 @@
         <!-- Styles -->
          <style>
             body {
-            background-image: url('{{ asset('storage/logoImage2.png') }}');
+            background-image: url('{{ asset('storage/logoImage2.png') }}'),url('{{ asset('storage/back8.jpg') }}');
             background-repeat: no-repeat;
             background-attachment: fixed;  
-            background-size: contain;
+            background-size: contain,cover;
             background-position: center;
 
             margin: 0;
@@ -26,7 +26,7 @@
             }
             .topnav {
             overflow: hidden;
-            background-color: #FFFFF2;
+            background-color: transparent;
             }
 
             .topnav a {
@@ -35,7 +35,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 23px;
             }
 
             .topnav a:hover {
@@ -55,13 +55,13 @@
         </style>
     </head>
     
-    <body style="background-color:#FFFFF2;">
+    <body style="background-color:#f7f9fb; ">
 
     <!--Login and Register-->
      <div class="topnav">
   <div class="topnav-right ">
-   <a href="{{route('auth.login')}}">Login</a>
-   <a href="{{route('auth.register')}}">Register</a>
+   <a href="{{route('login')}}">Login</a>
+   <a href="{{route('register')}}">Register</a>
   </div>
 </div>
 

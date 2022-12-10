@@ -143,7 +143,7 @@
     
         <!--topic buttons-->
         <div class="w3-bar">
-        <button class="w3-button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location='{{url('https://malshi623.github.io/WebQuiz-Spinwheel/')}}'">Mathematics</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <button class="w3-button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="window.location.href = 'https://malshi623.github.io/WebQuiz-Spinwheel/';">Mathematics</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         <button class="w3-button w3-deep-orange w3-round-xxlarge w3-hover-orange" onclick="document.location='{{route('user.spinwheel_biology')}}'">Biology</button>
         </div>
             <br>

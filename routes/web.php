@@ -40,9 +40,9 @@ Route::group(['prefix'=>'user','middleware'=>['isUser','auth','PreventBackHistor
 
     //routes for games
     Route::get('spinwheel',[UserController::class,'spinwheel'])->name('user.spinwheel');
-    Route::get('dartgame',[UserController::class,'spinwheel'])->name('user.dartgame');
-    Route::get('balloonshoot',[UserController::class,'spinwheel'])->name('user.balloonshoot');
-    Route::get('mountainclimb',[UserController::class,'spinwheel'])->name('user.mountainclimb');
+    Route::get('dartgame',[UserController::class,'dartgame'])->name('user.dartgame');
+    Route::get('balloonshoot',[UserController::class,'balloonshoot'])->name('user.balloonshoot');
+    Route::get('mountainclimb',[UserController::class,'mountainclimb'])->name('user.mountainclimb');
 
     //spinwheel
     Route::get('spinwheel_math',[UserController::class,'spinwheel_math'])->name('user.spinwheel_math');
@@ -76,39 +76,7 @@ Route::group(['prefix'=>'user','middleware'=>['isUser','auth','PreventBackHistor
     Route::get('mountainclimb_technology',[UserController::class,'mountainclimb_technology'])->name('user.mountainclimb_technology');
     Route::get('mountainclimb_random',[UserController::class,'mountainclimb_random'])->name('user.mountainclimb_random');
 
-    //math levels
-    Route::get('spinwheel_math_level1',[UserController::class,'spinwheel_math_level1'])->name('user.spinwheel_math_level1');
-    Route::get('dartgame_math_level1',[UserController::class,'dartgame_math_level1'])->name('user.dartgame_math_level1');
-    Route::get('balloonshoot_math_level1',[UserController::class,'balloonshoot_math_level1'])->name('user.balloonshoot_math_level1');
-    Route::get('mountainclimb_math_level1',[UserController::class,'mountainclimb_math_level1'])->name('user.mountainclimb_math_level1');
 
-    //biology levels
-    Route::get('spinwheel_biology_level1',[UserController::class,'spinwheel_biology_level1'])->name('user.spinwheel_biology_level1');
-    Route::get('dartgame_biology_level1',[UserController::class,'dartgame_biology_level1'])->name('user.dartgame_biology_level1');
-    Route::get('balloonshoot_biology_level1',[UserController::class,'balloonshoot_biology_level1'])->name('user.balloonshoot_biology_level1');
-    Route::get('mountainclimb_biology_level1',[UserController::class,'mountainclimb_biology_level1'])->name('user.mountainclimb_biology_level1');
 
-    //nature levels
-    Route::get('spinwheel_nature_level1',[UserController::class,'spinwheel_nature_level1'])->name('user.spinwheel_nature_level1');
-    Route::get('dartgame_nature_level1',[UserController::class,'dartgame_nature_level1'])->name('user.dartgame_nature_level1');
-    Route::get('balloonshoot_nature_level1',[UserController::class,'balloonshoot_nature_level1'])->name('user.balloonshoot_nature_level1');
-    Route::get('mountainclimb_nature_level1',[UserController::class,'mountainclimb_nature_level1'])->name('user.mountainclimb_nature_level1');
 
-    //history levels
-    Route::get('spinwheel_history_level1',[UserController::class,'spinwheel_history_level1'])->name('user.spinwheel_history_level1');
-    Route::get('dartgame_history_level1',[UserController::class,'dartgame_history_level1'])->name('user.dartgame_history_level1');
-    Route::get('balloonshoot_history_level1',[UserController::class,'balloonshoot_history_level1'])->name('user.balloonshoot_history_level1');
-    Route::get('mountainclimb_history_level1',[UserController::class,'mountainclimb_history_level1'])->name('user.mountainclimb_history_level1');
-
-    //technology levels
-    Route::get('spinwheel_technology_level1',[UserController::class,'spinwheel_technology_level1'])->name('user.spinwheel_technology_level1');
-    Route::get('dartgame_technology_level1',[UserController::class,'dartgame_technology_level1'])->name('user.dartgame_technology_level1');
-    Route::get('balloonshoot_technology_level1',[UserController::class,'balloonshoot_technology_level1'])->name('user.balloonshoot_technology_level1');
-    Route::get('mountainclimb_technology_level1',[UserController::class,'mountainclimb_technology_level1'])->name('user.mountainclimb_technology_level1');
-
-    //random levels
-    Route::get('spinwheel_random_level1',[UserController::class,'spinwheel_random_level1'])->name('user.spinwheel_random_level1');
-    Route::get('dartgame_random_level1',[UserController::class,'dartgame_random_level1'])->name('user.dartgame_random_level1');
-    Route::get('balloonshoot_random_level1',[UserController::class,'balloonshoot_random_level1'])->name('user.balloonshoot_random_level1');
-    Route::get('mountainclimb_random_level1',[UserController::class,'mountainclimb_random_level1'])->name('user.mountainclimb_random_level1');
 });

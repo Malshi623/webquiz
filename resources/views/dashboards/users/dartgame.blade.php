@@ -27,8 +27,7 @@
     <!-- Styles.css -->
          <style>
 
-
-body {
+            body {
                         background-image: url('{{ asset('storage/back8.jpg') }}');
                         background-repeat: no-repeat;
                         background-attachment: fixed;  
@@ -134,25 +133,33 @@ body {
                 </div>
             </div>
         </nav>
+    <!--boderbox of topic buttons-->
+<div class="topics">
+    
+    <!--title of page-->
+    <div>
+        <h1>what do you want to learn?</h1>
+    </div>
+    
         <!--topic buttons-->
         <div class="w3-bar">
-        <button class="w3-button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="document.location='{{route('user.dartgame_math')}}'">Mathematics</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-        <button class="w3-button w3-deep-orange w3-round-xxlarge w3-hover-orange" onclick="document.location='{{route('user.dartgame_biology')}}'">Biology</button>
+        <button class="w3-button w3-indigo w3-round-xxlarge w3-hover-light-blue" onclick="window.location.href = 'https://malshi623.github.io/WebQuiz-Dartgame/';">Mathematics</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <button class="w3-button w3-deep-orange w3-round-xxlarge w3-hover-orange" onclick="document.location='{{route('user.spinwheel_biology')}}'">Biology</button>
         </div>
             <br>
             <br>
             <div class="w3-bar">
-        <button class="w3-button w3-green w3-round-xxlarge w3-hover-light-green" onclick="document.location='{{route('user.dartgame_nature')}}'">Nature</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-        <button class="w3-button w3-brown w3-round-xxlarge w3-hover-khaki" onclick="document.location='{{route('user.dartgame_history')}}'">History</button>
+        <button class="w3-button w3-green w3-round-xxlarge w3-hover-light-green" onclick="document.location='{{route('user.spinwheel_nature')}}'">Nature</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <button class="w3-button w3-brown w3-round-xxlarge w3-hover-khaki" onclick="document.location='{{route('user.spinwheel_history')}}'">History</button>
         </div>
             <br>
             <br>
             <div class="w3-bar">
-        <button class="w3-button w3-purple w3-round-xxlarge w3-hover-sand" onclick="document.location='{{route('user.dartgame_technology')}}'">Technology</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-        <button class="w3-button w3-pink w3-round-xxlarge w3-hover-pale-red" onclick="document.location='{{route('user.dartgame_random')}}'">Random</button>
+        <button class="w3-button w3-purple w3-round-xxlarge w3-hover-sand" onclick="document.location='{{route('user.spinwheel_technology')}}'">Technology</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <button class="w3-button w3-pink w3-round-xxlarge w3-hover-pale-red" onclick="document.location='{{route('user.spinwheel_random')}}'">Random</button>
         </div>
-            </div>
-        </div>
+    </div>
+</div>
         <main class="py-4">
             @yield('content')
         </main>
